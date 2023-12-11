@@ -1,0 +1,552 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+  <!-- ======= Intro Section ======= -->
+  <div class="intro intro-carousel swiper position-relative">
+
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url({% static 'assets/img/slide-1.jpg' %});background-size: 100% 720px;">
+        <div class="overlay overlay-a"></div>
+        <div class="intro-content display-table">
+          <div class="table-cell">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="intro-body">
+                    <h1 style="color:yellow">Fake News Detection
+                      <hr> Machine Learning
+                    </p>
+                    <h1 class="intro-title mb-4 ">
+                      
+                    </h1>
+                    <p class="intro-subtitle intro-price">
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url({% static 'assets/img/slide-2.jpg' %});background-size: 100% 720px;;">
+        <div class="overlay overlay-a"></div>
+        <div class="intro-content display-table">
+          <div class="table-cell">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="intro-body">
+                    <h1 style="color:yellow">MultinomialNB Model<hr>
+                      Predict Fake News Detection data
+                    </h1>
+                    <h1 class="intro-title mb-4">
+                      
+                    </h1>
+                    <p class="intro-subtitle intro-price">
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url({% static 'assets/img/slide-3.jpg' %});background-size: 100% 720px;;">
+        <div class="overlay overlay-a"></div>
+        <div class="intro-content display-table">
+          <div class="table-cell">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="intro-body">
+                    <h1 style="color:yellow">Using MultinomialNB PredictModel<hr>
+                       DataField
+                    </h1>
+                    <h1 class="intro-title mb-4">
+                     
+                    </h1>
+                    <p class="intro-subtitle intro-price">
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div><!-- End Intro Section -->
+{% include 'footer.html' %}
+{% endblock  %}  
+
+
+
+
+
+
+
+
+
+
+
+
+REGISTRATION PAGE CODING:
+
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<section class="section-services section-t8">
+    <div class="container">
+    <h3>User Registration</h3><hr>
+    <div class="form">
+      <form class="form-a" action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="Type">First name</label>
+              <input type="text" class="form-control form-control-a" placeholder="First Name" name="first_name">
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="Type">Last name</label>
+              <input type="text" class="form-control form-control-a" placeholder="Last Name" name="last_name">
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="Type">Email</label>
+              <input type="email" class="form-control form-control-a" placeholder="Email" name="username">
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="Type">Password</label>
+              <input type="password" class="form-control form-control-a" placeholder="Password" name="password">
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+                <label class="pb-2" for="Type">Image</label>
+                <input type="file" class="form-control form-control-a" name="image">
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+                <label class="pb-2" for="Type">Mobile</label>
+                <input type="number" class="form-control form-control-a" name="mobile" placeholder="Mobile">
+            </div></div><div class="col-md-12 mb-2">
+            <div class="form-group mt-3">
+              <label class="pb-2" for="bedrooms">Address</label>
+              <textarea class="form-control form-control-a" name="address" placeholder="Adress in detail"></textarea>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-b">Register</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+{% include 'footer.html' %}
+{% endblock  %}
+
+SIGN IN PAGE CODING
+
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<section class="section-services section-t8">
+    <div class="container">
+    <h3>User Sign In</h3><hr>
+    <div class="form">
+      <form class="form-a" action="" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+        <div class="row">
+          <div class="col-md-12 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="Type">Email</label>
+              <input type="email" class="form-control form-control-a" placeholder="Email" name="username">
+            </div>
+          </div>
+          <div class="col-md-12 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="Type">Password</label>
+              <input type="password" class="form-control form-control-a" placeholder="Password" name="password">
+            </div>
+          </div>          
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-b">Sign In</button>
+          </div>
+        </div></form></div></div>
+{% include 'footer.html' %}
+{% endblock  %}
+
+
+NEWS PREDICTION PAGE:
+
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<section class="section-services section-t8">
+    <div class="container">
+    <h3>Fake News Prediction Form</h3><hr>
+    <div class="form">
+      <form class="form-a" action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-md-12 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="Type">Write Your News Content</label>
+              <textarea class="form-control form-control-a" placeholder="Write Your News Content" name="content" required>{{request.POST.content}}</textarea>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-b">Predict</button>
+          </div></div>
+      </form>
+      <div class="container">
+          {% if output == "Fake" %}
+            <h4 align="center" style="color:red">Oops! Given news is fake.</h4><hr>
+          {% elif output == "Real" %}
+            <h4 align="center" style="color:green">Great! Given news is real.</h4><hr>
+          {% endif %}
+      </div></div></div>
+{% include 'footer.html' %}
+{% endblock %}
+
+
+VIEW PREDICTION HISTORY PAGE CODING:
+
+{% include 'base.html' %}
+{% load static %}
+{% block body %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+<style>
+  #active {
+    border-radius: 50%;
+  }
+
+  #inactive {
+    border-radius: 50%;
+  }
+  #active:hover {
+    cursor: default !important;
+  }
+  #inactive:hover {
+    cursor: default !important;
+  }
+  img {
+    width: 60px;
+    height: 60px;
+  }
+  .table-responsive{
+    font-size:11px;
+  }
+  .material-symbols-outlined
+  {
+    font-size:14px;
+  }
+    td{ 
+    padding:0px;
+    }
+</style>
+
+<section class="section-services section-t8">
+    <div class="container">
+    <h3>{% if request.user.is_staff %}All{% else %}My{% endif %} History</h3><hr>
+    
+
+    <div class="table-responsive">
+        <table id="example1" class="display nowrap" style="width: 100%">
+            <thead>
+              <tr>
+                <th>#</th>
+                {% if request.user.is_staff %}
+                <th>Email</th>
+                <th>Name</th>
+                {% endif %}
+                <th>Search Data</th>
+                <th>Output</th>
+                <th>Search Date</th>
+                <th style="text-align: center">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for i in history %}
+              <tr>
+                <td>{{i.id}}</td>
+                {% if request.user.is_staff %}
+                <td>{{i.user.username}}</td>
+
+                <td>{{i.user.first_name}} {{i.user.last_name}}</td>
+                {% endif %}
+                <td>
+                  {{i.search_data}}
+                </td>
+                <td {% if i.output == 'Fake' %}style="color:red;font-weight:bold" {% else %}style="color:green;font-weight:bold"{% endif %}>
+                  {{i.output}}
+                </td>
+                <td>{{i.created}}</td>
+                
+                <td>
+                  <a href="/delete-history/{{i.id}}/" title="Delete History" class="btn btn-danger" onclick="return confirm('Are your sure?')"><i class="fas fa-trash" aria-hidden="true"></i> Delete</a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+    </div>
+
+  </div>
+{% include 'footer.html' %}
+{% include 'tablecdn.html' %}
+{% endblock  %}
+
+
+
+
+
+
+
+EDIT PROFILE PAGE CODING:
+
+
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<section class="section-services section-t8">
+    <div class="container">
+    <h3>My Profile</h3><hr>
+    <div class="form">
+      <form class="form-a" action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="Type">First name</label>
+              <input type="text" class="form-control form-control-a" placeholder="First Name" name="first_name" value="{{request.user.first_name}}">
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="Type">Last name</label>
+              <input type="text" class="form-control form-control-a" placeholder="Last Name" name="last_name" value="{{request.user.last_name}}">
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="Type">Email</label>
+              <input type="email" class="form-control form-control-a" placeholder="Email" name="username" value="{{request.user.username}}" readonly>
+            </div>
+          </div>
+          {% comment %} <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="Type">Password</label>
+              <input type="password" class="form-control form-control-a" placeholder="Password" name="password">
+            </div>
+          </div> {% endcomment %}
+          <div class="col-md-4 mb-2">
+            <div class="form-group">
+                <label class="pb-2" for="Type">Image</label>
+                <input type="file" class="form-control form-control-a" name="image">
+            </div>
+          </div>
+          <div class="col-md-2 mb-2">
+            <div class="form-group">
+                <img src="{% if request.user.register_set.all.0.image %}{{request.user.register_set.all.0.image.url}}{% endif %}" class="img-thumbnail">
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+                <label class="pb-2" for="Type">Mobile</label>
+                <input type="number" class="form-control form-control-a" name="mobile" placeholder="Mobile" value="{{request.user.register_set.all.0.mobile}}">
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="bedrooms">Address</label>
+              <textarea class="form-control form-control-a" name="address" placeholder="Adress in detail">{{request.user.register_set.all.0.address}}</textarea>
+            </div>
+          </div>
+          
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-b">Update</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+{% include 'footer.html' %}
+{% endblock  %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CHANGE PASSWORD PAGE CODING:
+
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<section class="section-services section-t8">
+    <div class="container">
+    <h3>Change Password</h3><hr>
+    <div class="form">
+      <form class="form-a" action="" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+        <div class="row"><div class="col-md-12 mb-2"> <div class="form-group">
+                <label class="pb-2" for="Type">Old Password</label>
+                <input type="password" class="form-control form-control-a" placeholder="Old Password" name="old-password">
+                </div> </div>
+            <div class="col-md-12 mb-2"><div class="form-group">
+                    <label class="pb-2" for="Type">New Password</label>
+                    <input type="password" class="form-control form-control-a" placeholder="New Password" name="new-password">
+                </div></div><div class="col-md-12 mb-2"><div class="form-group">
+                  <label class="pb-2" for="Type">Confirm Password</label>
+                  <input type="password" class="form-control form-control-a" placeholder="Confirm Password" name="confirm-password">
+                </div></div>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-b">Submit</button>
+            </div> </div>
+      </form>
+    </div> </div>
+{% include 'footer.html' %}
+{% endblock  %}
+
+
+ADMIN LOGIN PAGE CODING:
+
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<section class="section-services section-t8">
+    <div class="container">
+    <h3>Admin Sign In</h3><hr>
+    <div class="form">
+      <form class="form-a" action="" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+        <div class="row">
+          <div class="col-md-12 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="Type">Username</label>
+              <input type="text" class="form-control form-control-a" placeholder="Username" name="username">
+            </div>
+          </div>
+          <div class="col-md-12 mb-2">
+            <div class="form-group">
+              <label class="pb-2" for="Type">Password</label>
+              <input type="password" class="form-control form-control-a" placeholder="Password" name="password">
+            </div>
+          </div>
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-b">Sign In</button>
+          </div></div></form></div></div>
+{% include 'footer.html' %}
+{% endblock  %}
+
+
+
+VIEW ALL REG. USERS PAGE CODING:
+
+{% include 'base.html' %}
+{% load static %}
+{% block body %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+<style>
+#active {
+  border-radius: 50%;
+}
+#inactive {
+  border-radius: 50%;
+}
+#active:hover {
+  cursor: default !important;
+}
+#inactive:hover {
+  cursor: default !important;
+}
+img {
+  width: 60px;
+  height: 60px;
+}
+.table-responsive{
+  font-size:11px;
+}
+.material-symbols-outlined
+{
+  font-size:14px;
+}
+td{ 
+  padding:0px;
+}
+</style>
+
+<section class="section-services section-t8">
+    <div class="container">
+    <h3>All User </h3><hr>
+    
+
+    <div class="table-responsive">
+        <table id="example1" class="display nowrap" style="width: 100%">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Image</th>
+                <th>Email</th>
+                <th>Name</th>
+                <th>Mobile</th>
+                <th>Address</th>
+                <th style="text-align: center">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for i in data %}
+              <tr>
+                <td>{{i.id}}</td>
+                <td><img src="{{i.image.url}}" class="img-thumbnail" style="width:100px;height:100px"/></td>
+                <td>{{i.user.username}}</td>
+                <td>{{i.user.first_name}} {{i.user.last_name}}</td>
+                <td>{{i.mobile}}</td>
+                <td>{{i.address}}</td>
+                
+                <td>
+                  <a href="/delete-user/{{i.id}}/" title="Delete History" class="btn btn-danger" onclick="return confirm('Are your sure?')"><i class="fas fa-trash" aria-hidden="true"></i> Delete</a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+    </div>
+
+  </div>
+{% include 'footer.html' %}
+{% include 'tablecdn.html' %}
+{% endblock  %}
